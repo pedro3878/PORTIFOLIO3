@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro Lucas | Portfólio de Programação</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@800;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="canvas-particulas"></canvas>
+
+    <div class="conteudo-principal">
+        
+        <header class="cabecalho">
+            <div class="container-header">
+                <a href="#" class="logo">
+                    <div class="logo-box">PL</div>
+                    <span class="logo-texto">PEDRO LUCAS</span>
+                </a>
+
+                <nav class="menu-navegacao">
+                    <a href="#sobre">Sobre</a>
+                    <a href="#habilidades">Habilidades</a>
+                    <a href="#projetos">Projetos</a>
+                    <a href="#contacto">Contacto</a>
+                </nav>
+
+                <div class="acoes-header">
+                    <button id="botao-turbo" class="btn-turbo">
+                        <span>⚡</span> Boost Turbo
+                    </button>
+                    <a href="#contacto" class="btn-contacto-topo">Falar Comigo</a>
+                </div>
+            </div>
+        </header>
+
+        <section class="secao-hero">
+            <div class="container-hero">
+                
+                <div class="badge-status">
+                    <span class="ponto-verde"></span>
+                    Estudante de Programação Web
+                </div>
+
+                <div class="hero-titulo-linha">
+                    <h1 class="titulo-gigante">
+                        <span class="linha-pedro">PEDRO</span>
+                        <span class="linha-lucas texto-degrade">LUCAS</span>
+                    </h1>
+
+                    <div class="box-foguete-3d">
+                        <div class="brilho-fundo-3d"></div>
+                        <div id="container-foguete-3d"></div>
+                    </div>
+                </div>
+
+                <p class="subtitulo-hero">
+                    Desenvolvedor Front-End em formação. Aprendendo a criar interfaces funcionais, modernas e interativas.
+                </p>
+
+                <div class="botoes-hero">
+                    <a href="#projetos" class="btn-primario">Ver Projetos 🚀</a>
+                    <a href="#sobre" class="btn-secundario">Saber Mais</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="sobre" class="secao">
+            <div class="container-secao">
+                <div class="grid-sobre">
+                    <div class="coluna-texto">
+                        <h2 class="titulo-secao">
+                            Transformando ideias em <span class="texto-degrade-2">código limpo</span>
+                        </h2>
+                        <p class="texto-descricao">
+                            Sou estudante de programação focado em Front-End. Tenho grande entusiasmo por aprender novas tecnologias, resolver problemas e desenvolver projetos práticos.
+                        </p>
+                        <p class="texto-subdescricao">
+                            A minha aprendizagem inclui o uso de HTML5, CSS3, JavaScript e ferramentas modernas para a web.
+                        </p>
+                        <div class="estatisticas-grid">
+                            <div class="card-estatistica cartao-vidro">
+                                <span class="numero-estatistica text-purple">12+</span>
+                                <span class="rotulo-estatistica">Projetos</span>
+                            </div>
+                            <div class="card-estatistica cartao-vidro">
+                                <span class="numero-estatistica text-pink">100%</span>
+                                <span class="rotulo-estatistica">Dedicação</span>
+                            </div>
+                            <div class="card-estatistica cartao-vidro">
+                                <span class="numero-estatistica text-cyan">2027</span>
+                                <span class="rotulo-estatistica">Conclusão</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="coluna-cards-sobre">
+                        <div class="card-recurso cartao-vidro">
+                            <div class="icone-box icone-purple">💻</div>
+                            <h3>Desenvolvimento Web</h3>
+                            <p>Criação de páginas dinâmicas e responsivas.</p>
+                        </div>
+                        <div class="card-recurso cartao-vidro">
+                            <div class="icone-box icone-pink">🎨</div>
+                            <h3>UI / UX Design</h3>
+                            <p>Interfaces focadas na usabilidade do utilizador.</p>
+                        </div>
+                        <div class="card-recurso cartao-vidro">
+                            <div class="icone-box icone-cyan">⚡</div>
+                            <h3>Interatividade</h3>
+                            <p>Lógica de programação com JavaScript Vanilla.</p>
+                        </div>
+                        <div class="card-recurso cartao-vidro">
+                            <div class="icone-box icone-green">📦</div>
+                            <h3>Controlo de Versões</h3>
+                            <p>Organização de repositórios e projetos com Git.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="secao">
+            <div class="container-secao">
+                <div class="cabecalho-secao-centro">
+                    <h2 class="titulo-secao-centro">Habilidades Técnicas</h2>
+                    <p class="subtitulo-secao">Linguagens e ferramentas praticadas no curso.</p>
+                </div>
+
+                <div class="filtros-container">
+                    <button class="botao-filtro ativo" data-categoria="todas">Todas</button>
+                    <button class="botao-filtro" data-categoria="frontend">Front-End</button>
+                    <button class="botao-filtro" data-categoria="ferramentas">Ferramentas</button>
+                </div>
+
+                <div class="grid-habilidades" id="grid-habilidades">
+                    <div class="cartao-habilidade cartao-vidro" data-categoria="frontend">
+                        <div class="top-habilidade">
+                            <span class="emoji-hab">🌐</span>
+                            <span class="tag-nivel nivel-purple">Avançado</span>
+                        </div>
+                        <h3>HTML5 & CSS3</h3>
+                        <p>Estruturação semântica, Flexbox, Grid e responsividade.</p>
+                    </div>
+
+                    <div class="cartao-habilidade cartao-vidro" data-categoria="frontend">
+                        <div class="top-habilidade">
+                            <span class="emoji-hab">⚡</span>
+                            <span class="tag-nivel nivel-pink">Intermédio</span>
+                        </div>
+                        <h3>JavaScript (ES6+)</h3>
+                        <p>Manipulação do DOM, funções, eventos e consumo de dados.</p>
+                    </div>
+
+                    <div class="cartao-habilidade cartao-vidro" data-categoria="frontend">
+                        <div class="top-habilidade">
+                            <span class="emoji-hab">🎨</span>
+                            <span class="tag-nivel nivel-cyan">Intermédio</span>
+                        </div>
+                        <h3>CSS Moderno</h3>
+                        <p>Estilização com variáveis, layouts fluidos e animações.</p>
+                    </div>
+
+                    <div class="cartao-habilidade cartao-vidro" data-categoria="ferramentas">
+                        <div class="top-habilidade">
+                            <span class="emoji-hab">🐙</span>
+                            <span class="tag-nivel nivel-green">Intermédio</span>
+                        </div>
+                        <h3>Git & GitHub</h3>
+                        <p>Gestão e controlo de versões para trabalhos de programação.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="secao">
+            <div class="container-secao">
+                <div class="cabecalho-secao-centro">
+                    <h2 class="titulo-secao-centro">Projetos do Curso</h2>
+                    <p class="subtitulo-secao">Trabalhos práticos criados durante as aulas.</p>
+                </div>
+
+                <div class="grid-projetos">
+                    
+                    <div class="card-projeto cartao-vidro">
+                        <div class="capa-projeto gradiente-p1">
+                            <span class="emoji-capa">🚀</span>
+                        </div>
+                        <div class="conteudo-projeto">
+                            <h3>Portfólio Web 3D</h3>
+                            <p>Página pessoal com modelo de foguete em 3D e efeito de partículas.</p>
+                            <div class="tags-tecnologias">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>Three.js</span>
+                            </div>
+                            <button onclick="abrirModal('Portfólio Web 3D', 'Projeto desenvolvido no módulo prático para demonstrar a integração de elementos 3D com Three.js e conceitos modernos de CSS.')" class="btn-detalhes">
+                                Detalhes do Projeto
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card-projeto cartao-vidro">
+                        <div class="capa-projeto gradiente-p2">
+                            <span class="emoji-capa">📊</span>
+                        </div>
+                        <div class="conteudo-projeto">
+                            <h3>Sites teste</h3>
+                            <p>Sites para teste utilizando JavaScript.</p>
+                            <div class="tags-tecnologias">
+                                <span>JavaScript</span>
+                                <span>DOM</span>
+                            </div>
+                            <button onclick="abrirModal('Sites teste', 'Sites para teste utilizando JavaScript.')" class="btn-detalhes">
+                                Detalhes do Projeto
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card-projeto cartao-vidro">
+                        <div class="capa-projeto gradiente-p3">
+                            <span class="emoji-capa">📝</span>
+                        </div>
+                        <div class="conteudo-projeto">
+                            <h3>Lista de Tarefas</h3>
+                            <p>Gerenciador de tarefas com salvamento automático no navegador.</p>
+                            <div class="tags-tecnologias">
+                                <span>JS Vanilla</span>
+                                <span>LocalStorage</span>
+                            </div>
+                            <button onclick="abrirModal('Lista de Tarefas', 'Aplicação desenvolvida para aprender a guardar informações no navegador usando a API LocalStorage do JavaScript.')" class="btn-detalhes">
+                                Detalhes do Projeto
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="secao">
+            <div class="container-secao-mediano">
+                <div class="caixa-contacto cartao-vidro">
+                    <div class="cabecalho-secao-centro">
+                        <h2 class="titulo-secao-centro">Entrar em Contacto</h2>
+                        <p class="subtitulo-secao">Envie uma mensagem direta através do formulário abaixo.</p>
+                    </div>
+
+                    <form id="formulario-contacto">
+                        <div class="grid-form">
+                            <div class="campo-grupo">
+                                <label for="campo-nome">Seu Nome</label>
+                                <input type="text" id="campo-nome" required placeholder="Ex: Maria Silva">
+                            </div>
+                            <div class="campo-grupo">
+                                <label for="campo-email">Seu Email</label>
+                                <input type="email" id="campo-email" required placeholder="seuemail@exemplo.com">
+                            </div>
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="campo-mensagem">Mensagem</label>
+                            <textarea id="campo-mensagem" rows="5" required placeholder="Escreva a mensagem aqui..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-enviar">
+                            Enviar Mensagem 📤
+                        </button>
+                    </form>
+
+                    <div id="mensagem-sucesso" class="mensagem-sucesso oculto">
+                        Mensagem enviada com sucesso! 🚀
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="rodape">
+            <p>&copy; <span id="ano-atual"></span> Pedro Lucas. Projeto para o Curso de Programação Web.</p>
+        </footer>
+
+    </div>
+
+    <div id="modal-projeto" class="modal-backdrop oculto">
+        <div class="modal-conteudo cartao-vidro">
+            <h3 id="titulo-modal">Título</h3>
+            <p id="descricao-modal">Descrição do projeto...</p>
+            <button onclick="fecharModal()" class="btn-fechar">Fechar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
